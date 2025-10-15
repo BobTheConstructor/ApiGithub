@@ -53,6 +53,14 @@ export const theme = {
     "4xl": rem(40),
     "5xl": rem(64),
   },
+  breakpoints: {
+    based: '0',
+    small: '576px',
+    medium: '768px',
+    large: '992px',
+    big: '1200',
+    xbig: '1400px',
+  }
 };
 
 export function Theme({ children }) {

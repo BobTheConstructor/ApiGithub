@@ -13,5 +13,12 @@ module.exports = {
   plugins: ["react"],
   rules: {
     "import/prefer-default-export": "off",
+    'react/function-component-definition': [
+      'error',
+      {
+        namedComponents: ['function-declaration', 'arrow-function'],
+        unnamedComponents: ['function-expression', 'arrow-function'],
+      },
+    ],
   },
 };
