@@ -17,7 +17,7 @@ const RepositoriesPage = () => {
   const [repositories, setRepositories] = useState();
   const [languages, setLanguages] = useState();
   const [currentLang, setCurrentLang] = useState();
-  const [loading, setLoading] = useState(true);
+  const [loading, setLoading] = useState(false);
 
   useEffect(() => {
     const loadData = async () => {
@@ -41,7 +41,6 @@ const RepositoriesPage = () => {
 
   const onFilterClick = (language) => {
     setCurrentLang(language);
-    console.log("clica noq")
   };
 
   if (loading) {
