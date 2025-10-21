@@ -24,10 +24,14 @@ const RepositoriesPage = () => {
       const [userResponse, repositoriesResposonse] = await Promise.all([
         getUser(login),
         getRepos(login),
+        console.log("getuser, repo"),
       ]);
       setUser(userResponse.data);
+      console.log("setUser")
       setRepositories(repositoriesResposonse.data);
+      console.log("serRepo")
       setLanguages(getLangsFrom(repositoriesResposonse.data));
+      console.log("setlangs")
 
       setLoading(false);
     };
@@ -37,6 +41,7 @@ const RepositoriesPage = () => {
 
   const onFilterClick = (language) => {
     setCurrentLang(language);
+    console.log("clica noq")
   };
 
   if (loading) {
